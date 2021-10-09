@@ -423,6 +423,7 @@ IntVideoPortFindAdapter(
             else
             {
                 ERR_(VIDEOPRT, "HwFindAdapter call failed with error 0x%X\n", Status);
+                Status = STATUS_UNSUCCESSFUL;
                 goto Failure;
             }
         }
@@ -441,6 +442,7 @@ IntVideoPortFindAdapter(
     if (Status != NO_ERROR)
     {
         ERR_(VIDEOPRT, "HwFindAdapter call failed with error 0x%X\n", Status);
+        Status = STATUS_UNSUCCESSFUL;
         goto Failure;
     }
 
